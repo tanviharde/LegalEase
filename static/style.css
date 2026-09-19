@@ -1,0 +1,623 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f7f7f5;
+    color: #202020;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: white;
+
+    border-bottom:
+        1px solid #e8e8e5;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+
+.logo span {
+    font-weight: 400;
+}
+
+
+.tagline {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container {
+    width: min(1000px, 90%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    text-align: center;
+    padding: 75px 20px 45px;
+}
+
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    max-width: 760px;
+    margin: auto;
+
+    font-size:
+        clamp(38px, 6vw, 62px);
+
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+}
+
+
+.description {
+    max-width: 680px;
+
+    margin: 25px auto 0;
+
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STEP CARDS
+========================================================= */
+
+.step-card {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 22px;
+
+    padding: 32px;
+
+    background: white;
+
+    border:
+        1px solid #e4e4e0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.035);
+}
+
+
+.step-number {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.step-content {
+    flex: 1;
+}
+
+
+.step-content h2 {
+    font-size: 24px;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 22px;
+}
+
+
+.upload-description {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   OPTION CARDS
+========================================================= */
+
+.option-grid {
+    display: grid;
+    gap: 14px;
+}
+
+
+.language-grid {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+
+.task-grid {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+
+.option-card {
+    position: relative;
+
+    display: block;
+
+    border:
+        1px solid #deded9;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.option-card:hover {
+    border-color: #777;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.option-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+
+.option-content {
+    padding: 20px;
+}
+
+
+.option-card:has(input:checked) {
+    border-color: #222;
+
+    background: #fafaf7;
+
+    box-shadow:
+        0 0 0 1px #222;
+}
+
+
+.option-title {
+    font-size: 17px;
+    font-weight: 650;
+}
+
+
+.option-description {
+    margin-top: 6px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.task-icon {
+    margin-bottom: 13px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.upload-box {
+    display: block;
+
+    text-align: center;
+
+    padding: 42px 20px;
+
+    border:
+        2px dashed #d4d4ce;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+
+.upload-box:hover {
+    border-color: #222;
+    background: #fafaf8;
+}
+
+
+.upload-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.upload-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.upload-subtitle {
+    margin-top: 7px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+.file-name {
+    margin-top: 14px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.process-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.process-button:hover:not(:disabled) {
+    background: #444;
+}
+
+
+.process-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result-section {
+    margin: 45px 0 80px;
+}
+
+
+.result-header {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.result-header h2 {
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+}
+
+
+.result-block {
+    margin-bottom: 35px;
+}
+
+
+.result-block-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.result-block-header h3 {
+    font-size: 20px;
+}
+
+
+.text-card {
+    background: white;
+
+    border:
+        1px solid #e4e4e0;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    overflow: auto;
+
+    max-height: 620px;
+}
+
+
+.document-text {
+    white-space: pre-wrap;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #333;
+}
+
+
+.character-count {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   DOCUMENT META
+========================================================= */
+
+.document-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.document-meta > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 17px 18px;
+
+    background: white;
+
+    border:
+        1px solid #e4e4e0;
+
+    border-radius: 12px;
+}
+
+
+.document-meta span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+.document-meta strong {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-message {
+    margin-bottom: 18px;
+
+    padding: 13px 15px;
+
+    background: #f0f0ed;
+
+    border:
+        1px solid #deded9;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+    margin-bottom: 18px;
+
+    padding: 14px 15px;
+
+    background: #fff0f0;
+
+    border:
+        1px solid #efcaca;
+
+    border-radius: 10px;
+
+    color: #a33;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   UTILITY
+========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .tagline {
+        display: none;
+    }
+
+
+    .hero {
+        padding-top: 55px;
+    }
+
+
+    .step-card {
+        padding: 22px;
+        gap: 15px;
+    }
+
+
+    .language-grid,
+    .task-grid,
+    .document-meta {
+        grid-template-columns: 1fr;
+    }
+
+
+    .result-header {
+        display: block;
+    }
+
+
+    .character-count {
+        margin-top: 10px;
+    }
+}

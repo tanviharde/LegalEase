@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LegalEase</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        Legal<span>Ease</span>
+    </div>
+
+    <div class="tagline">
+        Understand. Translate. Simplify.
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <p class="eyebrow">
+            AI-POWERED LEGAL DOCUMENT ASSISTANT
+        </p>
+
+        <h1>
+            Understand your legal
+            documents with ease.
+        </h1>
+
+        <p class="description">
+            Choose your output language, select what you
+            want to do, and upload your legal document.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LANGUAGE
+    ================================================== -->
+
+    <section class="step-card">
+
+        <div class="step-number">
+            01
+        </div>
+
+        <div class="step-content">
+
+            <p class="eyebrow">
+                OUTPUT LANGUAGE
+            </p>
+
+            <h2>
+                What language do you want your result in?
+            </h2>
+
+
+            <div class="option-grid language-grid">
+
+
+                <label class="option-card">
+
+                    <input
+                        type="radio"
+                        name="targetLanguage"
+                        value="Marathi"
+                        checked
+                    >
+
+                    <div class="option-content">
+
+                        <div class="option-title">
+                            मराठी
+                        </div>
+
+                        <div class="option-description">
+                            Marathi
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+                <label class="option-card">
+
+                    <input
+                        type="radio"
+                        name="targetLanguage"
+                        value="English"
+                    >
+
+                    <div class="option-content">
+
+                        <div class="option-title">
+                            English
+                        </div>
+
+                        <div class="option-description">
+                            English
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TASK
+    ================================================== -->
+
+    <section class="step-card">
+
+        <div class="step-number">
+            02
+        </div>
+
+        <div class="step-content">
+
+            <p class="eyebrow">
+                CHOOSE TASK
+            </p>
+
+            <h2>
+                What would you like LegalEase to do?
+            </h2>
+
+
+            <div class="option-grid task-grid">
+
+
+                <label class="option-card task-card">
+
+                    <input
+                        type="radio"
+                        name="task"
+                        value="translate"
+                        checked
+                    >
+
+                    <div class="option-content">
+
+                        <div class="task-icon">
+                            ⇄
+                        </div>
+
+                        <div class="option-title">
+                            Translate Document
+                        </div>
+
+                        <div class="option-description">
+                            Translate the complete document.
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <label class="option-card task-card">
+
+                    <input
+                        type="radio"
+                        name="task"
+                        value="summarize"
+                    >
+
+                    <div class="option-content">
+
+                        <div class="task-icon">
+                            ≡
+                        </div>
+
+                        <div class="option-title">
+                            Summarize Document
+                        </div>
+
+                        <div class="option-description">
+                            Get a clear and concise summary.
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <label class="option-card task-card">
+
+                    <input
+                        type="radio"
+                        name="task"
+                        value="key_information"
+                    >
+
+                    <div class="option-content">
+
+                        <div class="task-icon">
+                            ◈
+                        </div>
+
+                        <div class="option-title">
+                            Key Information
+                        </div>
+
+                        <div class="option-description">
+                            Find names, dates, amounts and important details.
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <label class="option-card task-card">
+
+                    <input
+                        type="radio"
+                        name="task"
+                        value="simplify"
+                    >
+
+                    <div class="option-content">
+
+                        <div class="task-icon">
+                            Aa
+                        </div>
+
+                        <div class="option-title">
+                            Simplify Language
+                        </div>
+
+                        <div class="option-description">
+                            Make legal language easier to understand.
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <label class="option-card task-card">
+
+                    <input
+                        type="radio"
+                        name="task"
+                        value="legal_analysis"
+                    >
+
+                    <div class="option-content">
+
+                        <div class="task-icon">
+                            ⚖
+                        </div>
+
+                        <div class="option-title">
+                            Legal Analysis
+                        </div>
+
+                        <div class="option-description">
+                            Understand clauses, rights and next steps.
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         UPLOAD
+    ================================================== -->
+
+    <section class="step-card">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <div class="step-content">
+
+            <p class="eyebrow">
+                DOCUMENT
+            </p>
+
+            <h2>
+                Upload your legal document
+            </h2>
+
+            <p class="upload-description">
+                PDF, DOCX, JPG, JPEG and PNG are supported.
+                Scanned documents are processed with OCR.
+            </p>
+
+
+            <label
+                for="fileInput"
+                class="upload-box"
+            >
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <div class="upload-title">
+                    Choose a document
+                </div>
+
+                <div class="upload-subtitle">
+                    PDF · DOCX · JPG · JPEG · PNG
+                </div>
+
+            </label>
+
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,.docx,.jpg,.jpeg,.png"
+                hidden
+            >
+
+
+            <div
+                id="fileName"
+                class="file-name"
+            ></div>
+
+
+            <button
+                id="processButton"
+                class="process-button"
+                disabled
+            >
+                Process Document
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULT
+    ================================================== -->
+
+    <section
+        id="resultSection"
+        class="result-section hidden"
+    >
+
+
+        <div class="result-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    LEGAL EASE RESULT
+                </p>
+
+                <h2 id="resultTitle">
+                    Result
+                </h2>
+
+            </div>
+
+            <div
+                id="characterCount"
+                class="character-count"
+            ></div>
+
+        </div>
+
+
+
+        <div
+            id="statusMessage"
+            class="status-message"
+        ></div>
+
+
+
+        <div
+            id="errorMessage"
+            class="error-message hidden"
+        ></div>
+
+
+
+        <!-- DOCUMENT INFO -->
+
+        <div class="document-meta">
+
+            <div>
+                <span>Detected language</span>
+                <strong id="detectedLanguage">
+                    -
+                </strong>
+            </div>
+
+            <div>
+                <span>Document type</span>
+                <strong id="documentType">
+                    -
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <!-- ORIGINAL -->
+
+        <div class="result-block">
+
+            <div class="result-block-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EXTRACTED TEXT
+                    </p>
+
+                    <h3>
+                        Original Document
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-card">
+
+                <pre
+                    id="documentText"
+                    class="document-text"
+                ></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div
+            id="finalResultSection"
+            class="result-block hidden"
+        >
+
+            <div class="result-block-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        OUTPUT
+                    </p>
+
+                    <h3 id="finalResultTitle">
+                        Result
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-card">
+
+                <pre
+                    id="resultText"
+                    class="document-text"
+                ></pre>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        LegalEase · English ↔ Marathi Legal Document Assistant
+    </p>
+
+</footer>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
