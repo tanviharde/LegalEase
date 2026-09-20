@@ -22,15 +22,17 @@ print(f"Translation device: {DEVICE}")
 
 
 # ============================================================
-# LOCAL INDIC TRANS CODE
+# INDIC TRANS TOKENIZER
 # ============================================================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TOKENIZER_DIR = os.path.expanduser(
+    "~/.cache/huggingface/modules/transformers_modules/"
+    "ai4bharat/indictrans2-indic-en-dist-200M/"
+    "eb9e49d81077cfc5311e82ff36d8c1fc11557b5d"
+)
 
-CUSTOM_CODE_DIR = os.path.join(BASE_DIR, "custom_code")
-
-if CUSTOM_CODE_DIR not in sys.path:
-    sys.path.insert(0, CUSTOM_CODE_DIR)
+if TOKENIZER_DIR not in sys.path:
+    sys.path.insert(0, TOKENIZER_DIR)
 
 from tokenization_indictrans import IndicTransTokenizer
 
@@ -164,16 +166,6 @@ def translate_chunk(
         skip_special_tokens=True,
         clean_up_tokenization_spaces=True,
     )
-
-    # IndicTrans2 may return language tags in the decoded output.
-    # Remove the source/target tags before post-processing.
-    for i, translation in enumerate(translations):
-        translation = re.sub(
-            r"^(?:eng_Latn|mar_Deva)\s+(?:eng_Latn|mar_Deva)\s*",
-            "",
-            translation.strip(),
-        )
-        translations[i] = translation
 
     translations = processor.postprocess_batch(
         translations,
